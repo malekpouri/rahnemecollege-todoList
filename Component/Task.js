@@ -1,6 +1,6 @@
 const Task={
     subject:'',
-    dwadLine:Date.now(),
+    deadline:Date.now(),
     status:0,
     label:[0],
 }
