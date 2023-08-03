@@ -39,7 +39,7 @@ const task1: Task = {
   console.log('تسک های در حال انجام');
   console.log(taskmanager.filterTask(null,'doing',null));
 
-  console.log("تسک‌های با لیبل Red:");
+  console.log("تسک‌های با لیبل green:");
 const greenTasks = taskmanager.filterTask(null, null, 'green');
 console.log(greenTasks);
   
