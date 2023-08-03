@@ -2,8 +2,16 @@ import { Task } from "./ITask/ITask";
 import { Label } from "./Label";
 import { Status } from "./Status";
 
-class Taskmanager {    
-    constructor(public tasks:Task[]){}
+export class Taskmanager {    
+    private tasks:Task[]
+    constructor( ){
+        this.tasks=[]
+    }
+    // get task
+    getTasks=():Task[]=>{
+        return this.tasks;
+    }   
+
     // manage task
     addTask =(task:Task)=>{
         this.tasks.push(task)
@@ -39,7 +47,7 @@ class Taskmanager {
 
     // filter task
 
-    filterTask=(subject:string,status:Status,label:Label):Task[]=>{
+    filterTask=(subject:string | null,status:Status | null,label:Label | null):Task[]=>{
         const result:Task[]=this.tasks.filter((task)=>{
             const matchesStatus = !status || task.status === status
             const matchesLabel = !label || task.label.includes(label)
@@ -48,7 +56,4 @@ class Taskmanager {
         })
         return result
     }
-    
-
-
 }
