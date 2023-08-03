@@ -1,0 +1,1 @@
+export type Label = 'green'|'blue'|'red'|'yellow'
